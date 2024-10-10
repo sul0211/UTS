@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CycleCare Catalog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static',filename='Logo.png') }}" alt="CycleCare Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="catalog">
+            <h1>Our Product Catalog</h1>
+            <div class="product-grid">
+
+                <!-- Product Item 1 -->
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='product1.jpg') }}" alt="Bike Repair Kit">
+                    <h2>Bike Repair Kit</h2>
+                    <p>The perfect kit for fixing flat tires and quick repairs on the go.</p>
+                    <button class="btn">View Details</button>
+                </div>
+
+                <!-- Product Item 2 -->
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='product2.jpg') }}" alt="Mountain Bike Helmet">
+                    <h2>Mountain Bike Helmet</h2>
+                    <p>Protective and stylish, designed for safety on rugged trails.</p>
+                    <button class="btn">View Details</button>
+                </div>
+
+                <!-- Product Item 3 -->
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='product3.jpg') }}" alt="Water Bottle Holder">
+                    <h2>Water Bottle Holder</h2>
+                    <p>Keep your water bottle secure and accessible during rides.</p>
+                    <button class="btn">View Details</button>
+                </div>
+
+                <!-- Product Item 4 -->
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='product4.jpg') }}" alt="Cycling Gloves">
+                    <h2>Cycling Gloves</h2>
+                    <p>Comfortable and durable gloves for long rides.</p>
+                    <button class="btn">View Details</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 CycleCare. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
