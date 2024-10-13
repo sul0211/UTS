@@ -4,22 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CycleCare Catalog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <nav>
-            <div class="logo">
-                <img src="{{ url_for('static',filename='Logo.png') }}" alt="CycleCare Logo">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='Logo.png') }}" alt="CycleCare Logo" style="height: 50px;">
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Videos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Articles</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                    </ul>
+                    <div class="ml-auto">
+                        {% if username %}
+                            <span class="navbar-text">Welcome, {{ username }}!</span>
+                            <a href="/logout" class="btn btn-danger ml-2">Logout</a>
+                        {% else %}
+                            <a href="/" class="btn btn-primary">Login</a>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Videos</a></li>
-                <li><a href="#">Articles</a></li>
-                <li><a href="#">Shop</a></li>
-            </ul>
         </nav>
     </header>
 
@@ -31,33 +47,33 @@
 
                 <!-- Product Item 1 -->
                 <div class="product-item">
-                    <img src="{{ url_for('static', filename='product1.jpg') }}" alt="Bike Repair Kit">
-                    <h2>Bike Repair Kit</h2>
-                    <p>The perfect kit for fixing flat tires and quick repairs on the go.</p>
+                    <img src="{{ url_for('static', filename='12.jpg') }}" alt="ban">
+                    <h2>BAN MICHELLIN</h2>
+                    <p>Ban Michellin ini sangatlah cocok dipakai untuk balapan ditrack.</p>
                     <button class="btn">View Details</button>
                 </div>
 
                 <!-- Product Item 2 -->
                 <div class="product-item">
-                    <img src="{{ url_for('static', filename='product2.jpg') }}" alt="Mountain Bike Helmet">
-                    <h2>Mountain Bike Helmet</h2>
-                    <p>Protective and stylish, designed for safety on rugged trails.</p>
+                    <img src="{{ url_for('static', filename='3.webp') }}" alt="blok">
+                    <h2>BLOK Mesin</h2>
+                    <p>Blok mesin motor 110cc.</p>
                     <button class="btn">View Details</button>
                 </div>
 
                 <!-- Product Item 3 -->
                 <div class="product-item">
-                    <img src="{{ url_for('static', filename='product3.jpg') }}" alt="Water Bottle Holder">
-                    <h2>Water Bottle Holder</h2>
-                    <p>Keep your water bottle secure and accessible during rides.</p>
+                    <img src="{{ url_for('static', filename='2.jpg') }}" alt="Kaliper">
+                    <h2>Kaliper RCB</h2>
+                    <p>Kaliper RCB ini sangat pakem untuk pengereman motor.</p>
                     <button class="btn">View Details</button>
                 </div>
 
                 <!-- Product Item 4 -->
                 <div class="product-item">
-                    <img src="{{ url_for('static', filename='product4.jpg') }}" alt="Cycling Gloves">
-                    <h2>Cycling Gloves</h2>
-                    <p>Comfortable and durable gloves for long rides.</p>
+                    <img src="{{ url_for('static', filename='4.jpg') }}" alt="Handle">
+                    <h2>Handle Rem</h2>
+                    <p>Dengan Handle Rem ini mempermudah untuk menekan rem dengan mudah dan praktis.</p>
                     <button class="btn">View Details</button>
                 </div>
 
@@ -72,5 +88,8 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
